@@ -1,0 +1,101 @@
+// ===================================
+// DADOS DO PERFIL
+// ===================================
+
+export const perfil = {
+  nome: "Ana Silva",
+
+  area: "Estudante | Desenvolvedora Web em formação",
+
+  frase:
+    "Aprendendo tecnologia, desenvolvendo ideias e construindo meu futuro.",
+
+  sobre:
+    "Sou estudante do Ensino Médio e estou iniciando minha jornada na área de tecnologia. Tenho interesse em programação, desenvolvimento de sites e criação de soluções digitais.",
+
+  objetivo:
+    "Desenvolver minhas habilidades em programação, criar projetos e aprender novas tecnologias para construir uma carreira na área de desenvolvimento.",
+
+  email: "ana.silva@email.com",
+
+  github: "https://github.com/",
+
+  instagram: "https://www.instagram.com/",
+};
+
+// ===================================
+// DADOS DAS HABILIDADES
+// ===================================
+
+export const habilidades = [
+  {
+    nome: "HTML5",
+    nivel: "Estrutura Web",
+  },
+  {
+    nome: "CSS3",
+    nivel: "Estilização",
+  },
+  {
+    nome: "JavaScript",
+    nivel: "Programação",
+  },
+  {
+    nome: "React",
+    nivel: "Desenvolvimento Front-End",
+  },
+  {
+    nome: "Criatividade",
+    nivel: "Competência pessoal",
+  },
+];
+
+// ===================================
+// DADOS DOS PROJETOS
+// ===================================
+
+export const projetos = [
+  {
+    id: 1,
+    titulo: "Meu primeiro site",
+    descricao:
+      "Página desenvolvida para praticar os primeiros conceitos de HTML e CSS.",
+    categoria: "Front-End",
+    tecnologias: ["HTML5", "CSS3"],
+    status: "Concluído",
+    link: "https://github.com/",
+  },
+
+  {
+    id: 2,
+    titulo: "Cartão digital",
+    descricao:
+      "Cartão de apresentação pessoal desenvolvido com HTML e CSS.",
+    categoria: "Front-End",
+    tecnologias: ["HTML5", "CSS3"],
+    status: "Concluído",
+    link: "https://github.com/",
+  },
+
+  {
+    id: 3,
+    titulo: "Lista de tarefas",
+    descricao:
+      "Aplicação para organizar atividades utilizando JavaScript.",
+    categoria: "JavaScript",
+    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    status: "Em desenvolvimento",
+    link: "https://github.com/",
+  },
+
+  {
+    id: 4,
+    titulo: "Meu portfólio",
+    descricao:
+      "Portfólio pessoal desenvolvido utilizando React e Vite.",
+    categoria: "React",
+    tecnologias: ["React", "Vite", "CSS3"],
+    status: "Em desenvolvimento",
+    link: "https://github.com/",
+  },
+];

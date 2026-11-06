@@ -1,0 +1,21 @@
+export default function About({ perfil }) {
+  return (
+    <section id="sobre" className="secao">
+
+      <p className="sobretitulo">
+        CONHEÇA UM POUCO MAIS
+      </p>
+
+      <h2>Sobre mim</h2>
+
+      <p>{perfil.sobre}</p>
+
+      <h3 className="titulo-objetivo">
+        Meus objetivos
+      </h3>
+
+      <p>{perfil.objetivo}</p>
+
+    </section>
+  );
+}

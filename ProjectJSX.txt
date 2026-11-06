@@ -1,0 +1,81 @@
+import { useState } from "react";
+
+import ProjectCard from "./ProjectCard";
+
+export default function Projects({ projetos }) {
+
+  const [categoriaAtiva, setCategoriaAtiva] =
+    useState("Todos");
+
+  // Cria a lista de categorias disponíveis
+  const categorias = [
+    "Todos",
+    ...new Set(projetos.map((projeto) => projeto.categoria)),
+  ];
+
+  // Filtra os projetos de acordo com a categoria
+  const projetosFiltrados =
+    categoriaAtiva === "Todos"
+      ? projetos
+      : projetos.filter(
+          (projeto) => projeto.categoria === categoriaAtiva
+        );
+
+  return (
+    <section id="projetos" className="secao">
+
+      <p className="sobretitulo">
+        MEUS TRABALHOS
+      </p>
+
+      <h2>Projetos desenvolvidos</h2>
+
+      <p className="introducao-projetos">
+        Conheça alguns dos projetos que desenvolvi
+        durante minha jornada de aprendizagem.
+      </p>
+
+      {/* Botões de filtros */}
+
+      <div className="filtros">
+
+        {categorias.map((categoria) => (
+
+          <button
+            key={categoria}
+            className={
+              categoriaAtiva === categoria
+                ? "filtro ativo"
+                : "filtro"
+            }
+            onClick={() => setCategoriaAtiva(categoria)}
+          >
+            {categoria}
+          </button>
+
+        ))}
+
+      </div>
+
+      {/* Lista de projetos */}
+
+      <div className="lista-projetos">
+
+        {projetosFiltrados.map((projeto) => (
+
+          <ProjectCard
+            key={projeto.id}
+            projeto={projeto}
+          />
+
+        ))}
+
+      </div>
+
+      {projetosFiltrados.length === 0 && (
+        <p>Nenhum projeto encontrado.</p>
+      )}
+
+    </section>
+  );
+}
